@@ -60,7 +60,9 @@ jobs:
           zlib1g-dev
 
     - name: Configure
-      run: cmake -B build
+      run: |
+        cmake --version
+        cmake -B build
 
     - name: Build
       run: cmake --build build --parallel
